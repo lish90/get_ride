@@ -1,0 +1,9 @@
+<h1>Bookings#show</h1>
+<p>Find me in app/views/bookings/show.html.erb</p>
+
+<div>
+  <ul>
+     <li class='list'> <%= @car.model %> <%= @car.make%> <%= @booking.start_date%> <%= @booking.end_date%> <%total = (@booking.end_date - @booking.start_date).to_i * @car.rate%> <%= "Total cost of hire: £#{total}" %></li>
+       <%= link_to 'Book anothor Car', new_car_booking_path(@car) %>
+  </ul>
+</div>
