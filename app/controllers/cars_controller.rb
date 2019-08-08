@@ -35,10 +35,11 @@ class CarsController < ApplicationController
   end
 
   def destroy
-    if @car.destroy
+    if @car.bookings.empty?
+      @car.destroy
       redirect_to profile_path(current_user), notice: 'Car was successfully deleted.'
     else
-      render :destroy
+      redirect_to profile_path(current_user), notice: 'Car cannot be deleted, it has associated bookings.'
     end
   end
 
