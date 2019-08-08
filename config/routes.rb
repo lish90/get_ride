@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
 
 
-  resources :bookings, only: [:destroy], as: :delete
+  resources :bookings, only: [:destroy]
 end
