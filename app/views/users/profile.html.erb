@@ -1,0 +1,66 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |car| %>
+      <tr>
+        <td><%= car.make %></td>
+        <td><%= car.model %></td>
+        <td><%= link_to 'Show', car %></td>
+        <td>
+           <%= link_to 'Edit', edit_car_path(car) %>
+        </td>
+        <td>
+           <%= link_to 'Delete', car, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+ <%= link_to 'Add New Car', new_car_path %>
+
+ <br>
+
+ <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Loan Start</th>
+      <th>Loan Return</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.user.name %></td>
+        <td><%= booking.end_date %></td>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.car.make %></td>
+        <td><%= booking.car.model %></td>
+        <td><%= booking.car.id %></td>
+        <td><%= booking.user.id %></td>
+        <td><%= link_to 'Show', car_booking_path(booking.car_id, booking) %></td>
+        <td><%= link_to 'Edit', edit_car_booking_path(booking.car_id, booking) %></td>
+        <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+ <%= link_to 'Make New Booking', cars_path %>

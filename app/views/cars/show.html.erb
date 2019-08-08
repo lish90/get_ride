@@ -1,0 +1,11 @@
+<h1>Cars#show</h1>
+<p>Find me in app/views/cars/show.html.erb</p>
+
+
+<div>
+  <ul>
+     <li class='list'> <%= @car.model %> <%= @car.make%> <%= @car.rate%></li>
+       <%= link_to 'Book Car', new_car_booking_path(@car) %>
+       <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </ul>
+</div>
