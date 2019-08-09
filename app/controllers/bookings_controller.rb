@@ -21,17 +21,6 @@ class BookingsController < ApplicationController
 
   end
 
-  # def confirm
-  #   @booking = Booking.new(booking_params)
-  #   @booking.user = current_user
-  #   @booking.car = @car
-  #     if @booking.save
-  #       redirect_to new_car_booking_path(@@car, @booking), notice: 'Please confirm you booking details '
-  #     else
-  #      render :new
-  #     end
-  # end
-
   def edit
   end
 
