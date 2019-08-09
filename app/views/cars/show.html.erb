@@ -6,6 +6,7 @@
   <ul>
      <li class='list'> <%= @car.model %> <%= @car.make%> <%= @car.rate%> <%= @car.category%></li>
        <%= link_to 'Book Car', new_car_booking_path(@car) %>
+       <%= link_to 'Review Car', new_car_review_path(@car) %>
        <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
   </ul>
 </div>

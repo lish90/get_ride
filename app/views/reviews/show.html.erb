@@ -1,0 +1,10 @@
+<h1>Reviews#show</h1>
+<p>Find me in app/views/reviews/show.html.erb</p>
+
+<div>
+  <ul>
+     <li class='list'> <%= @review.title %> <%= @review.details %> <%= @review.rating %> <%= @car.category%></li>
+       <%= link_to 'Book Car',  cars_path %>
+       <%= link_to 'Review Car', new_car_review_path(@car) %>
+  </ul>
+</div>

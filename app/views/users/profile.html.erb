@@ -64,3 +64,29 @@
 <br>
 
  <%= link_to 'Make New Booking', cars_path %>
+
+ <br>
+
+ <table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Details</th>
+      <th>Rating</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+ <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td><%= review.title %></td>
+        <td><%= review.details %></td>
+        <td><%= review.rating %></td>
+        <td><%= review.user.name %></td>
+        <td><%= link_to 'Show review', car_review_path(review.car_id, review) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
