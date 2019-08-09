@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
    get 'users/:id/profile', to: 'users#profile', as: :profile
+   get 'cars/car_id/bookings', to: 'bookings#confirm'
+   post 'cars/car_id/bookings', to: 'bookings#confirm', as: :confirm
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :cars do
