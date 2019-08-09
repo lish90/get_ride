@@ -10,6 +10,7 @@ puts 'Deleteing all data'
 Booking.destroy_all
 Car.destroy_all
 User.destroy_all
+Review.destroy_all
 puts 'Data deleted'
 puts 'Creating Users, Cars and Bookings'
 5.times do
@@ -38,6 +39,17 @@ puts 'Creating Users, Cars and Bookings'
         user: user
       )
       booking.save!
+      1.times do
+        review = Review.new(
+          title: Faker::Lorem.sentence(word_count: 3),
+          details: Faker::Lorem.paragraph(sentence_count: 2),
+          rating: rand(1..5),
+          review_date: Faker::Date.between(from: 100.days.ago, to: Date.today),
+          car: car,
+          user: user
+      )
+      review.save!
+    end
     end
   end
 end

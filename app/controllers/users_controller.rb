@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def profile
     @bookings = current_user.bookings
     @listings = current_user.cars
+    @reviews = current_user.reviews
   end
 
   # def edit

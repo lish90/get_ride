@@ -14,11 +14,10 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.car = @car
     if @booking.save
-      redirect_to new_car_booking_path(@car, @booking), notice: 'Booking was successfully Created '
+      redirect_to car_booking_path(@car, @booking), notice: 'Booking was successfully Created '
     else
       render :new
     end
-
   end
 
   def edit
