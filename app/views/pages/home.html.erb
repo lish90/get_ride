@@ -2,8 +2,13 @@
 <div class="banner">
 <div class="intro">
   <div class="card-category">
-    <h1>Find your ideal car for you here on<br /><strong>Get a Ride<strong></h1>
-    <p> Search through houndreds of cars from our trousted members.<br />Get in touch with the owners, for a more personal renting experience.
+  <h1>Get a Ride </h1>
+    <br>
+    <br>
+    <h2>Find your ideal car here on <strong>Get a Ride<strong></h2>
+      <br>
+      <br>
+    <p> Search through hundreds of cars from our trusted members.<br />Get in touch with the owners for a more personal renting experience.
     </p>
   </div>
   <div class="card-category">
@@ -26,33 +31,23 @@
 
 
   <h4>
-    Take a look at some of or most popular cars
+    Take a look at some of our most popular cars
   </h4>
   <div class="cards">
-  <div class="card-category">
-    <%= image_tag "yellow_car.jpeg" %>
+    <% @cars.each do |car| %>
+    <div class="card-category">
+    bookings
+    <%= link_to car_path(car) do %>
+      <%= image_tag "yellow_car.jpeg" %>
+    <% end %>
+
+
    <p>
-    £100/day
+    Rate: £<%= car.rate %> per day
     <br>
-    Owner: Ella
+    Owner: <%= car.user.username %>
   </p>
   </div>
 
-  <div class="card-category">
-     <%= image_tag "grey_car.jpeg" %>
-     <p>
-    £150/day
-    <br>
-    Owner: Mike
-  </p>
-  </div>
-
-  <div class="card-category">
-     <%= image_tag "campvan.jpeg" %>
-     <p>
-       £105/day
-     <br>
-       Owner: Jasper
-     </p>
-  </div>
+    <% end  %>
 </div>
