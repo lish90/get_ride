@@ -7,7 +7,7 @@
 <div>
   <ul>
     <%@cars.each do |car|  %>
-     <li class='list'> <%= car.model %> <%= car.make%> <%= car.rate%></li>
+     <li class='list'> <%= link_to car.model, car_path(car) %> <%= car.make%> <%= car.rate%></li>
        <%= link_to 'Book Car', new_car_booking_path(car) %>
     <% end %>
   </ul>

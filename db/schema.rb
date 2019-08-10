@@ -10,32 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_03_154401) do
+ActiveRecord::Schema.define(version: 2019_08_09_080725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.date "start_date"
-    t.date "end_date"
+    t.date "start_date", null: false
+    t.date "end_date", null: false
     t.bigint "user_id"
     t.bigint "car_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "state"
     t.index ["car_id"], name: "index_bookings_on_car_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "cars", force: :cascade do |t|
-    t.string "make"
-    t.string "model"
-    t.string "category"
-    t.text "description"
-    t.integer "rate"
+    t.string "make", null: false
+    t.string "model", null: false
+    t.string "category", null: false
+    t.text "description", null: false
+    t.integer "rate", default: 0, null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_cars_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "title", null: false
+    t.text "details", null: false
+    t.integer "rating", default: 0, null: false
+    t.date "review_date", null: false
+    t.bigint "user_id"
+    t.bigint "car_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["car_id"], name: "index_reviews_on_car_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,4 +69,6 @@ ActiveRecord::Schema.define(version: 2019_08_03_154401) do
   add_foreign_key "bookings", "cars"
   add_foreign_key "bookings", "users"
   add_foreign_key "cars", "users"
+  add_foreign_key "reviews", "cars"
+  add_foreign_key "reviews", "users"
 end

@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new]
   before_action :set_car, only: [:show, :new, :create, :edit, :update]
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
@@ -11,10 +12,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user_id = current_user.id
+    @booking.user = current_user
     @booking.car = @car
     if @booking.save
-      redirect_to car_booking_path(@car, @booking), notice: 'Booking was created successfully.'
+      redirect_to car_booking_path(@car, @booking), notice: 'Booking was successfully Created '
     else
       render :new
     end

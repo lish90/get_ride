@@ -1,4 +1,67 @@
 // Specific CSS for your home-page
 body {
   background-image: url("Group.png");
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+h1{
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+h4 {
+  color: #7ECFC0;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+p {
+  color: #EC8F6A;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-right: 50px;
+}
+
+.carousel-item img {
+  width: 400px;
+  height: 300px;
+  border-radius: 100px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: #7ECFC0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: #EC8F6A;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card-category > img {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
 }
