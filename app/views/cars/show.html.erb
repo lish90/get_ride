@@ -2,24 +2,38 @@
 <p>Find me in app/views/cars/show.html.erb</p>
 
 
-<div>
-  <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="cards">
+        <div class="card-category">
+          <%= image_tag "yellow_car.jpeg", class: "homepage_car"  %>
+        </div>
+      </div>
+      <div>
+      <ul>
+         <li class='list'> <%= @car.model %> <%= @car.make%> <%= @car.rate%> <%= @car.category%></li>
+           <%= link_to 'Book Car', new_car_booking_path(@car), class: "btn btn-ghost" %>
+           <%= link_to 'Review Car', new_car_review_path(@car), class: "btn btn-ghost" %>
+           <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-ghost" %>
+      </ul>
+    </div>
+    </div>
+    <div class="col">
+      <h1>Hi, im Jasper</h1>
+      <p>joined in 2001 </p>
+      <br>
+      <p>I gave up my finance career in 2010 to pursue a lifelong dream: to travel the world full time. To support myself, I rent out my apartment on Airbnb. It's been a great experience, so great that I recently wrote a book about it! It's called Get Paid For Your Pad and you can find it on Amazon.
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Lunch
-  </div>
+      I also started a podcast under the same name that you can find in iTunes.
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Dinner
+      I share my adventures with the world through my blog, The Traveling Dutchman. I love exploring the planet, learning different cultures and discovering new places.
+
+      I'm also a big fan of anything that involves the ocean and starts with an "s", such as scuba diving, swimming, surfing, sailing and snorkeling.
+
+      I love meeting people from different parts of the world and I look forward to connecting with you as a host or traveler. I will do my best to make stay as comfortable as possible or being a good guest, depending on my role.</p>
+      <h2> About the car</h2>
+    </div>
   </div>
 </div>
-  <ul>
-     <li class='list'> <%= @car.model %> <%= @car.make%> <%= @car.rate%> <%= @car.category%></li>
-       <%= link_to 'Book Car', new_car_booking_path(@car) %>
-       <%= link_to 'Review Car', new_car_review_path(@car) %>
-       <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </ul>
-</div>
+
