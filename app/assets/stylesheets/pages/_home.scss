@@ -8,17 +8,35 @@ h1{
   font-family: 'Reem Kufi', sans-serif;
 }
 
+h4 {
+  color: #7ECFC0;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+p {
+  color: #EC8F6A;
+}
+
 .intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-right: 50px;
 }
 
+.carousel-item img {
+  width: 400px;
+  height: 300px;
+  border-radius: 100px;
+}
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 70px 0;
 }
 
 .banner h1 {
@@ -39,6 +57,11 @@ h1{
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  padding: 30px;
+  grid-gap: 20px;
+}
+
+.card-category > img {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
 }
