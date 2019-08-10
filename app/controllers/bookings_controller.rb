@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new]
   before_action :set_car, only: [:show, :new, :create, :edit, :update]
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 

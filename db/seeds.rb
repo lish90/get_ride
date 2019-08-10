@@ -7,12 +7,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Deleteing all data'
+Review.destroy_all
 Booking.destroy_all
 Car.destroy_all
 User.destroy_all
-Review.destroy_all
 puts 'Data deleted'
-puts 'Creating Users, Cars and Bookings'
+puts 'Creating Users, Cars, Reviews and Bookings'
 5.times do
   user = User.new(
     email: Faker::Internet.email,
