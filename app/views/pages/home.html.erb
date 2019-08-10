@@ -1,6 +1,58 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Hello I am a banner</p>
-    <a class="btn btn-flat" href="#">Look for cars now</a>
+
+<div class="banner">
+<div class="intro">
+  <div class="card-category">
+    <h1>Find your ideal car for you here on<br /><strong>Get a Ride<strong></h1>
+    <p> Search through houndreds of cars from our trousted members.<br />Get in touch with the owners, for a more personal renting experience.
+    </p>
+  </div>
+  <div class="card-category">
+    <div class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= image_tag "car1.gif" %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag "car2.gif" %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag "car3.gif" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <h4>
+    Take a look at some of or most popular cars
+  </h4>
+  <div class="cards">
+  <div class="card-category">
+    <%= image_tag "yellow_car.jpeg" %>
+   <p>
+    £100/day
+    <br>
+    Owner: Ella
+  </p>
+  </div>
+
+  <div class="card-category">
+     <%= image_tag "grey_car.jpeg" %>
+     <p>
+    £150/day
+    <br>
+    Owner: Mike
+  </p>
+  </div>
+
+  <div class="card-category">
+     <%= image_tag "campvan.jpeg" %>
+     <p>
+       £105/day
+     <br>
+       Owner: Jasper
+     </p>
   </div>
 </div>
