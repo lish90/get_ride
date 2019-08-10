@@ -22,6 +22,9 @@ h4 {
 p {
   color: #EC8F6A;
 }
+li {
+  list-style-type:none;
+}
 
 .intro {
   display: grid;
@@ -65,8 +68,15 @@ p {
   grid-gap: 20px;
 }
 
-.card-category > img {
+.card-category > img > {
   width: 400px;
   height: 300px;
   border-radius: 15px;
+}
+
+.homepage_car {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+
 }

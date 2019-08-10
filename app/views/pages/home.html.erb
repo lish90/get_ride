@@ -10,6 +10,10 @@
       <br>
     <p> Search through hundreds of cars from our trusted members.<br />Get in touch with the owners for a more personal renting experience.
     </p>
+    <br>
+    <br>
+
+    <%= link_to "Book Now", cars_path,class: "btn btn-ghost" %>
   </div>
   <div class="card-category">
     <div class="carousel slide" data-ride="carousel">
@@ -33,15 +37,14 @@
   <h4>
     Take a look at some of our most popular cars
   </h4>
+  <p>bookings</p>
   <div class="cards">
+
     <% @cars.each do |car| %>
     <div class="card-category">
-    bookings
     <%= link_to car_path(car) do %>
-      <%= image_tag "yellow_car.jpeg" %>
+      <%= image_tag "yellow_car.jpeg", class: "homepage_car" %>
     <% end %>
-
-
    <p>
     Rate: £<%= car.rate %> per day
     <br>
