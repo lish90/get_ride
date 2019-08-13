@@ -37,20 +37,20 @@
   <h4>
     Take a look at some of our most popular cars
   </h4>
+
+
   <p>bookings</p>
-  <div class="cards">
-
-    <% @cars.each do |car| %>
-    <div class="card-category">
-    <%= link_to car_path(car) do %>
-      <%= image_tag "yellow_car.jpg", class: "homepage_car" %>
-    <% end %>
-   <p>
-    Rate: £<%= car.rate %> per day
-    <br>
-    Owner: <%= car.user.username %>
-  </p>
-  </div>
-
-    <% end  %>
+    <div class="cards">
+      <% @cars.each do |car| %>
+      <div class="card-category">
+       <%= link_to car_path(car) do %>
+        <%= cl_image_tag car.photo, width: 400, height: 300, crop: :fill %>
+          <% end %>
+           <p>Rate: £<%= car.rate %> per day
+           <br>
+          Owner: <%= car.user.username %></p>
+          </div>
+      <% end  %>
+   </div>
 </div>
+

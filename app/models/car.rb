@@ -2,6 +2,7 @@ class Car < ApplicationRecord
   belongs_to :user
   has_many :bookings
   has_many :reviews
+  mount_uploader :photo, PhotoUploader
 
   validates :model, presence: true
   validates :make, presence: true
