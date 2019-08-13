@@ -13,6 +13,11 @@ Car.destroy_all
 User.destroy_all
 puts 'Data deleted'
 puts 'Creating Users, Cars, Reviews and Bookings'
+images_url =['https://res.cloudinary.com/lish90code/image/upload/v1565619650/car/redfiat_bv4kv7.jpg',
+             'https://res.cloudinary.com/lish90code/image/upload/v1565646598/car/grey_car_jwe7pq.jpg',
+             'https://res.cloudinary.com/lish90code/image/upload/v1565646550/car/yellow_car_whfvaw.jpg',
+             'https://res.cloudinary.com/lish90code/image/upload/v1565646515/car/campvan_dd0puj.jpg',
+             'https://res.cloudinary.com/lish90code/image/upload/v1565619371/car/bluebnw_cgigtk.jpg']
 5.times do
   user = User.new(
     email: Faker::Internet.email,
@@ -21,6 +26,7 @@ puts 'Creating Users, Cars, Reviews and Bookings'
     password: '123456'
   )
   user.save!
+  counter = 0
   5.times do
     car = Car.new(
       make: Faker::Vehicle.manufacture,
@@ -30,6 +36,10 @@ puts 'Creating Users, Cars, Reviews and Bookings'
       rate: rand(150..500),
       user: user
     )
+
+    car.remote_photo_url = images_url[counter]
+    counter += 1
+
     car.save!
     5.times do
       booking = Booking.new(
@@ -47,9 +57,9 @@ puts 'Creating Users, Cars, Reviews and Bookings'
           review_date: Faker::Date.between(from: 100.days.ago, to: Date.today),
           car: car,
           user: user
-      )
-      review.save!
-    end
+        )
+        review.save!
+      end
     end
   end
 end
