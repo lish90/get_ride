@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 body {
-  background-image: asset_url("group.png");
+  // background-image: asset_url("group.png");
   font-family: 'Reem Kufi', sans-serif;
 }
 
@@ -69,6 +69,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  margin: 40px;
 }
 
 .card-category > img > {
