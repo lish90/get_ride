@@ -1,9 +1,21 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
-
+<div class = "container booking-container">
+<h1>Booking Confirmation</h1>
+<h3 class ="booking-header">Congratulations! You're booked</h3>
+<div class="card-category">
+    <div class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= image_tag "car1.gif" %>
+        </div>
+      </div>
+    </div>
+  </div>
 <div>
   <ul>
-     <li class='list'> <%= @car.model %> <%= @car.make%> <%= @booking.start_date%> <%= @booking.end_date%> <%total = (@booking.end_date - @booking.start_date).to_i * @car.rate%> <%= "Total cost of hire: £#{total}" %></li>
-       <%= link_to 'Book another Car', new_car_booking_path(@car) %>
+     <li class='booking-list'> <%= @car.model %> <%= @car.make%></li>
+     <li class='booking-list'><%= @booking.start_date%> to <%= @booking.end_date%></li>
+     <li class='booking-list'><%total = (@booking.end_date - @booking.start_date).to_i * @car.rate%> <%= "Total cost of hire: £#{total}" %></li>
+      <li class ='booking-button'><%= link_to 'Book Another Car', new_car_booking_path(@car),class: "btn btn-ghost" %></li>
   </ul>
+</div>
 </div>

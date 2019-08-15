@@ -7,9 +7,14 @@
       </div>
         <div class="form-inputs">
           <%= f.input :end_date, html5: true %>
+          <p class="price-tag" data-rate="<%= car.rate %>">This car costs £ <%= car.rate %> per day</p>
         </div>
+          <div>
+            <h1 class="full-price d-none"></h1>
+          </div>
           <div class="form-actions">
             <%= f.button :submit %>
           </div>
   <% end %>
 </div>
+
