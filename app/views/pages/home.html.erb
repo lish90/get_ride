@@ -27,6 +27,12 @@
         <div class="carousel-item">
           <%= image_tag "car3.gif" %>
         </div>
+        <div class="carousel-item">
+          <%= image_tag "car4.gif" %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag "car5.gif" %>
+        </div>
       </div>
     </div>
   </div>
@@ -38,13 +44,11 @@
     Take a look at some of our most popular cars
   </h4>
 
-
-  <p>bookings</p>
     <div class="cards">
       <% @cars.each do |car| %>
-      <div class="card-category">
+      <div class="car_cards">
        <%= link_to car_path(car) do %>
-        <%= cl_image_tag car.photo, width: 400, height: 300, crop: :fill %>
+        <%= cl_image_tag car.photo, class: "cars-card-image"  %>
           <% end %>
            <p>Rate: £<%= car.rate %> per day
            <br>
@@ -53,4 +57,5 @@
       <% end  %>
    </div>
 </div>
+
 
