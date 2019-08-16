@@ -9,7 +9,7 @@
         <div class="cars-card-content">
             <p>Name of the owner: <%= link_to car.model, car_path(car)%></p>
             <p>Make of the car: <%= car.make%></p>
-            <p>Rate: £ <%= car.rate%></p>
+            <p>Rate: £<%= car.rate%></p>
               <%= link_to 'Book Car', new_car_booking_path(car),class: "btn btn-ghost"%>
             <br>
           </div>
