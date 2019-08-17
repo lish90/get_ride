@@ -1,33 +1,26 @@
 
-
-
-
 <div class="container">
   <h1 id="title">Rent this car</h1>
-  <div class="row">
-    <div class="col">
-      <div class="cards">
+  <br>
+      <div class= "items">
         <div class="card-category">
           <%= image_tag "yellow_car.jpg", class: "homepage_car"  %>
         </div>
-      </div>
-        <div>
+        <div class="card-category">
         <br>
           <ul>
-           <li class='list'>
+           <li >
              <p> Car Brand: <%= @car.make%></p>
              <p>Car Model: <%= @car.model %></p>
-             <p>Rate: <%= @car.rate %> per day</p>
-             <p> Car category: <%= @car.category%>
-             </li><p>
+             <p>Rate: £ <%= @car.rate %> per day</p>
+             <p> Car category: <%= @car.category%> </p>
+             </li>
           </ul>
           <br>
-           <%= link_to 'Book Car', new_car_booking_path(@car), class: 'btn btn-ghost' %>
-           <%= link_to 'Review Car', new_car_review_path(@car), class: "btn btn-ghost" %>
-           <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-ghost' %>
-        </div>
+      </div>
     </div>
-    <div class="col">
+    <br>
+    <div>
       <h1>Hi, im Jasper</h1>
       <p>joined in 2001 </p>
       <br>
@@ -40,6 +33,8 @@
       I'm also a big fan of anything that involves the ocean and starts with an "s", such as scuba diving, swimming, surfing, sailing and snorkeling.
 
       I love meeting people from different parts of the world and I look forward to connecting with you as a host or traveler. I will do my best to make stay as comfortable as possible or being a good guest, depending on my role.</p>
+    </div>
+    <div>
       <h2> About the car</h2>
 
       <p>Heated windscreen washer jets
@@ -62,6 +57,18 @@
         Instrument cluster with speedometer with miles per hour read out, tachometer and fuel gauge
       </p>
       </div>
-    </div>
 </div>
-
+<br>
+<div>
+<div>
+  <%= link_to 'Book Car', new_car_booking_path(@car), class: 'btn btn-ghost' %>
+  </div>
+  <br>
+  <div>
+    <%= link_to 'Review Car', new_car_review_path(@car), class: "btn btn-ghost" %>
+  </div>
+  <br>
+  <div>
+           <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-ghost' %>
+  </div>
+</div>
