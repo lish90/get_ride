@@ -60,16 +60,16 @@
       </div>
 </div>
 <br>
-<div>
-<div>
+<div class="action_cards">
+<div class="action_card">
   <%= link_to 'Book Car', new_car_booking_path(@car), class: 'btn btn-ghost' %>
   </div>
   <br>
-  <div>
+  <div class="action_card">
     <%= link_to 'Review Car', new_car_review_path(@car), class: "btn btn-ghost" %>
   </div>
   <br>
-  <div>
+  <div class="action_card">
            <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-ghost' %>
   </div>
 </div>
