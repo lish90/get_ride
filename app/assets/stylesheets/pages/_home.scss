@@ -29,6 +29,16 @@ h4 {
   color: #EC8F6A;
 }
 
+h6 {
+    font-size: 28px;
+    color: #7ECFC0;
+    text-align: left;
+}
+
+.top-button {
+  margin: 15px;
+}
+
 p {
   color: #EC8F6A;
   font-size: 20px;
@@ -108,6 +118,14 @@ li {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+
+.action_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
  #title{

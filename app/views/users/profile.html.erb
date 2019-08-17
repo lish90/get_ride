@@ -8,12 +8,12 @@
       <br>
       <div class="actions">
       <ul>
-        <li><%= link_to 'Add a new car', new_car_path,class: "btn btn-ghost" %></li>
+        <li class="top-button"><%= link_to 'Add a new car', new_car_path,class: "btn btn-ghost" %></li>
         <li><%= link_to 'Make a new booking', cars_path,class: "btn btn-ghost" %></li>
       <br>
       </ul>
       </div>
-    <h2>Reviews about You</h2>
+    <h6>Your Reviews</h6>
       <table>
         <thead>
           <tr>
@@ -40,7 +40,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h2>Your Cars</h2>
+      <h6>Your Cars</h6>
   <table>
     <thead>
       <tr>
@@ -63,7 +63,8 @@
       <% end %>
     </tbody>
   </table>
-  <h2>Your Bookings</h2>
+  <br>
+  <h6>Your Bookings</h6>
   <table>
     <thead>
       <tr>
@@ -77,8 +78,8 @@
     <tbody>
       <% @bookings.each do |booking| %>
         <tr>
-          <td><%= booking.end_date %></td>
           <td><%= booking.start_date %></td>
+          <td><%= booking.end_date %></td>
           <td><%= booking.car.make %></td>
           <td><%= booking.car.model %></td>
           <td>
@@ -89,6 +90,7 @@
       <% end %>
     </tbody>
   </table>
+  <br>
 </div>
 </div>
 </div>

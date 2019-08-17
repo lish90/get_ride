@@ -17,7 +17,7 @@ class CarsController < ApplicationController
     @car = Car.new(car_params)
     @car.user = current_user
     if @car.save
-      redirect_to car_path(@car), notice: 'Car was successfully created.'
+      redirect_to profile_path(current_user), notice: 'Car was successfully created.'
     else
       render :new
     end
