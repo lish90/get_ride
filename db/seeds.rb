@@ -36,10 +36,8 @@ images_url =['https://res.cloudinary.com/lish90code/image/upload/v1565619650/car
       rate: rand(150..500),
       user: user
     )
-
     car.remote_photo_url = images_url[counter]
     counter += 1
-
     car.save!
     5.times do
       booking = Booking.new(
