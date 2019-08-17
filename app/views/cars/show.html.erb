@@ -1,8 +1,9 @@
-<h1>Cars#show</h1>
-<p>Find me in app/views/cars/show.html.erb</p>
+
+
 
 
 <div class="container">
+  <h1 id="title">Rent this car</h1>
   <div class="row">
     <div class="col">
       <div class="cards">
@@ -10,14 +11,21 @@
           <%= image_tag "yellow_car.jpg", class: "homepage_car"  %>
         </div>
       </div>
-      <div>
-      <ul>
-         <li class='list'> <%= @car.model %> <%= @car.make%> <%= @car.rate%> <%= @car.category%></li>
-           <%= link_to 'Book Car', new_car_booking_path(@car), class: "btn btn-ghost" %>
+        <div>
+        <br>
+          <ul>
+           <li class='list'>
+             <p> Car Brand: <%= @car.make%></p>
+             <p>Car Model: <%= @car.model %></p>
+             <p>Rate: <%= @car.rate %> per day</p>
+             <p> Car category: <%= @car.category%>
+             </li><p>
+          </ul>
+          <br>
+           <%= link_to 'Book Car', new_car_booking_path(@car), class: 'btn btn-ghost' %>
            <%= link_to 'Review Car', new_car_review_path(@car), class: "btn btn-ghost" %>
-           <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-ghost" %>
-      </ul>
-    </div>
+           <%= link_to 'Delete Car', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-ghost' %>
+        </div>
     </div>
     <div class="col">
       <h1>Hi, im Jasper</h1>
@@ -33,7 +41,27 @@
 
       I love meeting people from different parts of the world and I look forward to connecting with you as a host or traveler. I will do my best to make stay as comfortable as possible or being a good guest, depending on my role.</p>
       <h2> About the car</h2>
+
+      <p>Heated windscreen washer jets
+        Rain sensor including auto headlights activation
+        Automatic Stability Control (ASC)
+
+        On board diagnostics
+        BMW Online services
+        Brake force display
+        Personal Profile
+        BMW emergency call
+        BMW Teleservices
+        Real time traffic information
+        Optimum shift indicator
+        Check Control warning system for monitoring of lights and door/luggage compartment open warning
+        Brake pad wear indicator in front and rear
+        On board computer - average speed+fuel consumption, service interval, clock/date, odometer/trip meter, outside temperature display and ice warning
+        Oil temperature display via on board computer in instrument cluster
+        Lights on warning by audio warning signal when ignition is switched off
+        Instrument cluster with speedometer with miles per hour read out, tachometer and fuel gauge
+      </p>
+      </div>
     </div>
-  </div>
 </div>
 
