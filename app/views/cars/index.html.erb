@@ -3,13 +3,13 @@
 
   <p id="sub_title">Cars for hire</p>
 
-    <%= @cars.each do |car| %>
+    <% @cars.each do |car| %>
     <div class="cars-card">
        <%= cl_image_tag car.photo, width: 400, height: 300, crop: :fill %>
         <div class="cars-card-content">
             <p>Name of the owner: <%= link_to car.model, car_path(car)%></p>
             <p>Make of the car: <%= car.make%></p>
-            <p>Rate: £<%= car.rate%></p>
+            <p>Rate: £<%= car.rate%> per day</p>
               <%= link_to 'Book Car', new_car_booking_path(car),class: "btn btn-ghost"%>
             <br>
           </div>
