@@ -1,87 +1,98 @@
-<div class="container">
-<h2>Cars</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Make</th>
-      <th>Model</th>
-      <th>Action</th>
-    </tr>
-  </thead>
+<h1>Take a look at your page</h1>
 
-  <tbody>
-    <% @listings.each do |car| %>
-      <tr>
-        <td><%= car.make %></td>
-        <td><%= car.model %></td>
-        <td><%= link_to 'Show', car %>
-           <%= link_to 'Edit', edit_car_path(car) %>
-           <%= link_to 'Delete', car, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="page">
+  <div class="first_column">
+  <div class="first_column_1">
+    <div class="profile_pic">
+      <%= image_tag "profile_pic" %>
+    </div>
+    <div class="actions">
+      <%= link_to 'Add a new car', new_car_path %>
+      <br>
+      <%= link_to 'Make a new booking', cars_path %>
+    </div>
+  </div>
 
-<br>
-
- <%= link_to 'Add New Car', new_car_path %>
-
- <br>
- <h2>Bookings</h2>
- <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Loan Start</th>
-      <th>Loan Return</th>
-      <th>Make</th>
-      <th>Model</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.user.name %></td>
-        <td><%= booking.end_date %></td>
-        <td><%= booking.start_date %></td>
-        <td><%= booking.car.make %></td>
-        <td><%= booking.car.model %></td>
-        <td><%= link_to 'Show', car_booking_path(booking.car_id, booking) %>
-        <%= link_to 'Edit', edit_car_booking_path(booking.car_id, booking) %>
-        <%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
- <%= link_to 'Make New Booking', cars_path %>
-
- <br>
- <h2>Reviews</h2>
- <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Details</th>
-      <th>Rating</th>
-      <th>Name</th>
-    </tr>
-  </thead>
- <tbody>
-    <% @reviews.each do |review| %>
-      <tr>
-        <td><%= review.title %></td>
-        <td><%= review.details %></td>
-        <td><%= review.rating %></td>
-        <td><%= review.user.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="first_column_2">
+      <h2>Reviews about You</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Details</th>
+            <th>Rating</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @reviews.each do |review| %>
+            <tr>
+              <td><%= review.title %></td>
+              <td><%= review.details %></td>
+              <td><%= review.rating %></td>
+              <td><%= review.user.name %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
+<div class="second_column">
+<div class="second_column_1">
+  <h2>Your Cars</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @listings.each do |car| %>
+        <tr>
+          <td><%= car.make %></td>
+          <td><%= car.model %></td>
+          <td>
+            <%= link_to 'Show', car %>
+            <%= link_to 'Edit', edit_car_path(car) %>
+            <%= link_to 'Delete', car, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="second_column_2">
+  <h2>Your Bookings</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Start day</th>
+        <th>End day</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= booking.end_date %></td>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.car.make %></td>
+          <td><%= booking.car.model %></td>
+          <td>
+            <%= link_to 'Show', car_booking_path(booking.car_id, booking) %>
+            <%= link_to 'Edit', edit_car_booking_path(booking.car_id, booking) %>
+            <%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+
 

@@ -1,12 +1,57 @@
-table {
-  border-spacing: 5px;
+
+.profile_pic > img {
+  border-radius: 50%;
+  padding: 30px;
+  width: 200px;
+  height: 200px;
 }
 
-th {
+.actions {
+  padding: 30px;
   text-align: center;
 }
 
 table, th, td {
-  border: 1px solid #EF4B4B;
-  color: #EC8F6A;
+  border: 1px solid #FF935C;
+  padding: 15px;
+  text-align: center;
+}
+
+
+table {
+  border-style: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #FF935C;
+
+}
+
+th {
+  border-bottom : 3px solid #FF935C;
+  color: #EF4B4B;
+}
+
+td {
+  color: #7ECFC0;
+}
+
+
+.second_column{
+  float: right;
+}
+
+.page {
+  display: inline-table;
+}
+
+
+.first_column_2 {
+  padding: 50px;
+  margin: auto;
+}
+
+
+.second_column_1, .second_column_2 {
+  padding-bottom: 60px;
+  padding-top: 20px;
+  padding-right: 30px;
 }
