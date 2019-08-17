@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 body {
-   background-image: asset_url("Group.png");
+  background-image: asset_url("Group.png");
   font-family: 'Reem Kufi', sans-serif;
 }
 
@@ -27,6 +27,7 @@ h4 {
 
 p {
   color: #EC8F6A;
+  font-size: 20px;
 }
 
 li {
@@ -74,36 +75,30 @@ li {
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  margin: 40px;
+  grid-gap: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.card-category > img > {
+.card-category > img {
   width: 400px;
   height: 300px;
   border-radius: 15px;
 }
 
-.homepage_car {
+.car_cards > img {
   width: 400px;
   height: 300px;
   border-radius: 15px;
 
 }
 
-.booking-list {
-  font-size: 1.5rem;
-  padding-top: 20px;
-}
-
-.booking-container {
-  text-align: center;
-}
-
-.booking-button {
-  padding-top: 20px;
-}
-
-.booking-header {
-  padding-bottom: 40px;
+.cars-card-image {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+  & img {
+    object-fit: cover;
+  }
 }
