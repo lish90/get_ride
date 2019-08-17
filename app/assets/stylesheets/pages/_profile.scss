@@ -8,7 +8,12 @@
 
 .actions {
   padding: 30px;
-  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.first_column {
+  float:center;
 }
 
 table, th, td {
