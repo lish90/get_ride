@@ -129,3 +129,12 @@ li {
   }
 }
 
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-right: 50px;
+}
+
