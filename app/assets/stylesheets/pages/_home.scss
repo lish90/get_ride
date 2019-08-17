@@ -110,6 +110,14 @@ li {
     justify-content: center;
 }
 
+.action_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
  #title{
   font-family: 'Reem Kufi', sans-serif;
   color: #7ECFC0;
