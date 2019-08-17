@@ -7,7 +7,7 @@
     <div class="col">
       <div class="cards">
         <div class="card-category">
-          <%= image_tag "yellow_car.jpg", class: "homepage_car"  %>
+          <%= cl_image_tag @car.photo, class: "homepage_car"  %>
         </div>
       </div>
       <div>
@@ -23,7 +23,8 @@
       <h1>Hi, im Jasper</h1>
       <p>joined in 2001 </p>
       <br>
-      <p>I gave up my finance career in 2010 to pursue a lifelong dream: to travel the world full time. To support myself, I rent out my apartment on Airbnb. It's been a great experience, so great that I recently wrote a book about it! It's called Get Paid For Your Pad and you can find it on Amazon.
+      <p><%= @car.description %>
+        I gave up my finance career in 2010 to pursue a lifelong dream: to travel the world full time. To support myself, I rent out my apartment on Airbnb. It's been a great experience, so great that I recently wrote a book about it! It's called Get Paid For Your Pad and you can find it on Amazon.
 
       I also started a podcast under the same name that you can find in iTunes.
 
