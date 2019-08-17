@@ -3,26 +3,24 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
+  <div class="form-inputs h5">
     <%= f.input :title %>
   </div>
 
 
-  <div class="form-inputs">
+  <div class="form-inputs h5">
     <%= f.input :details, as: :text %>
   </div>
 
 
-  <div class="form-inputs">
+  <div class="form-inputs h5">
     <%= f.input :rating, collection: 1..5 %>
   </div>
 
-  <div class="form-inputs">
+  <div class="form-inputs h5">
     <%= f.input :review_date, html5: true %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <br>
+    <%= f.button :submit, class: "btn-ghost" %>
 <% end %>
 </div>
