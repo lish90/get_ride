@@ -1,20 +1,23 @@
 <div class = "container booking-container">
 <h1>Booking Confirmation</h1>
 <h3 class ="booking-header">Congratulations! You're booked</h3>
+<br>
 <div class="card-category">
     <div class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <%= image_tag "car1.gif" %>
+          <%= image_tag "car5.gif" %>
         </div>
       </div>
     </div>
   </div>
 <div>
+  <br>
   <ul>
      <li class='booking-list'> <%= @car.model %> <%= @car.make%></li>
      <li class='booking-list'><%= @booking.start_date%> to <%= @booking.end_date%></li>
      <li class='booking-list'><%total = (@booking.end_date - @booking.start_date).to_i * @car.rate%> <%= "Total cost of hire: £#{total}" %></li>
+     <br><br>
       <li class ='booking-button'><%= link_to 'Book Another Car', new_car_booking_path(@car),class: "btn btn-ghost" %></li>
   </ul>
 </div>
